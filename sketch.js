@@ -6,7 +6,7 @@ var Engine = Matter.Engine,
   World = Matter.World,
   Events = Matter.Events,
   Bodies = Matter.Bodies;
-
+var d;
 var turn =0;
 var particle;
 var plinkos = [];
@@ -76,7 +76,6 @@ text("900",580,500);
 text("900",662,500);
 text("900",740,500);
 
-
 for (var i = 0; i < plinkos.length; i++) {
      
   plinkos[i].display();
@@ -104,7 +103,7 @@ for (var i = 0; i < plinkos.length; i++) {
   particle.display();
 
   if(particle.body.position.y > 670){
-    if(particle.body.position.x <300){
+    if(particle.body.position.x <240){
       score = score+500;
       particle = null;
       if(turn>= 5){
@@ -118,7 +117,7 @@ for (var i = 0; i < plinkos.length; i++) {
     particle.display();
   
     if(particle.body.position.y > 670){
-      if(particle.body.position.x >301 && particle.body.position.x <600){
+      if(particle.body.position.x >241 && particle.body.position.x <480){
         score = score+600;
         particle = null;
         if(turn>= 5){
@@ -132,7 +131,7 @@ for (var i = 0; i < plinkos.length; i++) {
       particle.display();
     
       if(particle.body.position.y > 670){
-        if(particle.body.position.x >601 && particle.body.position.x<800){
+        if(particle.body.position.x >481 && particle.body.position.x<800){
           score = score+900;
           particle = null;
           if(turn>= 5){
